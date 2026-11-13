@@ -1,0 +1,53 @@
+# AI-Kavach-Pack system form. Fill in what you know; leave a line out if you do not know yet.
+# Then run: kavach-pack build system.toml
+
+[system]
+name = "Name of the AI system"
+owner = "Business owner (name or role)"
+purpose = "One sentence: what it does and for whom"
+status = "idea"              # idea, pilot, live
+audience = "employees"       # internal-team, employees, customers, public
+users = 500                  # rough number of people who will use it
+vulnerable_users = false     # children, elderly, people in distress, etc.
+
+[model]
+provider = ""                # who supplies the model
+model = ""
+inference_location = "unknown"   # india, outside-india, unknown
+storage_location = "unknown"     # india, outside-india, unknown
+vendor_trains_on_data = "unknown"  # yes, no, unknown
+# vendor_retention_days = 30
+
+[data]
+personal_data = false
+data_kinds = []              # contact, financial, government-id, health, biometric, children, location, other
+lawful_basis = "none-recorded"   # consent, legitimate-use, none-recorded
+notice_covers_ai = false
+# retention_days = 90
+stores = []                  # vector-store, cache, logs, agent-memory, fine-tune
+erasure_tested = false
+logs_masked = false
+
+[behaviour]
+role = "drafts"              # drafts, recommends, decides, acts
+domain = "productivity"      # productivity, operations, hr, sales, finance, health, legal, safety, credit, eligibility
+actions = []                 # for agents: what it can do, e.g. ["send email", "block card"]
+reversibility = "easy"       # easy, manual, hard
+human_approval = "all"       # none, above-limit, all
+# action_limit_inr = 10000
+
+[languages]
+languages = ["en"]
+quality_tested_languages = []
+
+[controls]
+guardrails = false
+injection_tested = false
+injection_tested_languages = []
+red_team = false
+kill_switch = false
+monitoring = false
+fallback_to_human = false
+rollback_plan = false
+incident_owner = ""
+# monthly_budget_inr = 50000

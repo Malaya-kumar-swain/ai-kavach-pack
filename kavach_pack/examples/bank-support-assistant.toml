@@ -1,0 +1,47 @@
+# Fictional example: a customer support agent for a bank that can take simple actions.
+[system]
+name = "Bank Support Assistant"
+owner = "Head of Customer Service"
+purpose = "Answers customer questions and can block a card or raise a dispute, in English, Hindi and Odia"
+status = "idea"
+audience = "customers"
+users = 2000000
+
+[model]
+provider = "Example AI Ltd"
+model = "example-model-1"
+inference_location = "unknown"
+storage_location = "india"
+vendor_trains_on_data = "unknown"
+
+[data]
+personal_data = true
+data_kinds = ["contact", "financial", "government-id"]
+lawful_basis = "legitimate-use"
+notice_covers_ai = false
+stores = ["vector-store", "cache", "logs", "agent-memory"]
+erasure_tested = false
+logs_masked = false
+
+[behaviour]
+role = "acts"
+domain = "finance"
+actions = ["block card", "raise dispute"]
+reversibility = "manual"
+human_approval = "above-limit"
+action_limit_inr = 25000
+
+[languages]
+languages = ["en", "hi", "or"]
+quality_tested_languages = ["en", "hi"]
+
+[controls]
+guardrails = true
+injection_tested = true
+injection_tested_languages = ["en"]
+red_team = false
+kill_switch = true
+monitoring = true
+fallback_to_human = true
+rollback_plan = false
+incident_owner = "Digital Banking on-call"

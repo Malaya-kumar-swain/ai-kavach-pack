@@ -1,0 +1,47 @@
+# Fictional example: an assistant that reads loan documents for credit officers.
+[system]
+name = "Loan Document Reader"
+owner = "Head of Retail Credit"
+purpose = "Reads salary slips, bank statements and ID documents and drafts a summary for the credit officer"
+status = "pilot"
+audience = "employees"
+users = 350
+
+[model]
+provider = "Example AI Ltd"
+model = "example-model-1"
+inference_location = "india"
+storage_location = "india"
+vendor_trains_on_data = "no"
+vendor_retention_days = 0
+
+[data]
+personal_data = true
+data_kinds = ["financial", "government-id", "contact"]
+lawful_basis = "consent"
+notice_covers_ai = true
+retention_days = 180
+stores = ["vector-store", "logs"]
+erasure_tested = false
+logs_masked = true
+
+[behaviour]
+role = "recommends"
+domain = "credit"
+reversibility = "manual"
+human_approval = "all"
+
+[languages]
+languages = ["en", "hi"]
+quality_tested_languages = ["en"]
+
+[controls]
+guardrails = true
+injection_tested = true
+injection_tested_languages = ["en"]
+red_team = false
+monitoring = true
+fallback_to_human = true
+rollback_plan = true
+incident_owner = "AI Platform on-call"
+monthly_budget_inr = 150000

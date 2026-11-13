@@ -1,0 +1,29 @@
+# Fictional example: an internal tool that drafts meeting summaries.
+[system]
+name = "Meeting Summary Drafts"
+owner = "Engineering Manager, Platform team"
+purpose = "Drafts a summary of internal engineering meetings for the team to edit"
+status = "live"
+audience = "internal-team"
+users = 40
+
+[model]
+provider = "Example AI Ltd"
+model = "example-model-1"
+inference_location = "india"
+storage_location = "india"
+vendor_trains_on_data = "no"
+
+[behaviour]
+role = "drafts"
+domain = "productivity"
+reversibility = "easy"
+
+[languages]
+languages = ["en"]
+quality_tested_languages = ["en"]
+
+[controls]
+injection_tested = true
+monitoring = true
+incident_owner = "Platform team lead"
